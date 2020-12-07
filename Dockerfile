@@ -51,7 +51,7 @@ RUN if ! test -s /build/${upname}_${upversion}.orig.tar.gz; then \
     url="https://codeload.github.com/BelledonneCommunications/bcg729/tar.gz/${upversion}" && \
     echo "Fetching: ${url}" >&2 && \
     curl --fail "${url}" >/build/${upname}_${upversion}.orig.tar.gz; fi
-RUN test $(md5sum /build/bcg729_1.0.4.orig.tar.gz | awk '{print $1}') = 0234814618a4314cb56ae0b9084d1ae1
+RUN test $(md5sum /build/bcg729_1.1.1.orig.tar.gz | awk '{print $1}') = 0234814618a4314cb56ae0b9084d1ae1
 RUN cd /build && tar zxf "${upname}_${upversion}.orig.tar.gz" && \
     mv debian "${upname}-${upversion}/"
 WORKDIR "/build/${upname}-${upversion}"

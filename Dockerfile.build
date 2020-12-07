@@ -4,7 +4,7 @@ cd "$(dirname "$0")"  # jump to curdir
 # Pass these on the command line.
 oscodename=${1:-debian/stretch}  # debian/stretch
 upname=bcg729
-upversion=${2:-1.0.4}       # bcg729 version
+upversion=${2:-1.1.1}       # bcg729 version
 debversion=${3:-0osso3}     # deb build version, e.g. 0osso2
 
 echo "Usage: $0 [$oscodename [$upversion [$debversion]]]"
